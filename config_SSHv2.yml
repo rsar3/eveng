@@ -1,0 +1,24 @@
+---
+- hosts: switches
+  gather_facts: no
+
+  vars:
+    ansible_user: "attacoe"
+    ansible_password: "Test123456"
+    ansible_connection: network_cli
+    ansible_network_os: ios
+
+  tasks:
+#  - name: CONFIGURE SSH VERSION 2 
+#    ios_config:
+#      lines:
+#        - ip ssh version 2
+
+  - name: SHOW RUN | I SSH 
+    ios_command:
+      commands:
+        - show ver 
+    register: after_v2
+
+  - debug: var=after_v2.stdout_lines
+
