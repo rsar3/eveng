@@ -1,0 +1,436 @@
+ansible-playbook [core 2.13.13]
+  config file = /home/karthik/playbooks/ansible.cfg
+  configured module search path = ['/home/karthik/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python3.8/dist-packages/ansible
+  ansible collection location = /home/karthik/.ansible/collections/ansible_collections/cisco/ise/plugins/modules
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 3.8.10 (default, Nov 22 2023, 10:22:35) [GCC 9.4.0]
+  jinja version = 3.1.4
+  libyaml = True
+Using /home/karthik/playbooks/ansible.cfg as config file
+host_list declined parsing /home/karthik/inventory/hosts as it did not pass its verify_file() method
+script declined parsing /home/karthik/inventory/hosts as it did not pass its verify_file() method
+auto declined parsing /home/karthik/inventory/hosts as it did not pass its verify_file() method
+Parsed /home/karthik/inventory/hosts inventory source with ini plugin
+Skipping callback 'default', as we already have a stdout callback.
+Skipping callback 'minimal', as we already have a stdout callback.
+Skipping callback 'oneline', as we already have a stdout callback.
+
+PLAYBOOK: get_endpoints00.yaml *************************************************
+1 plays in get_endpoints00.yaml
+Read vars_file 'credentials.yaml'
+Read vars_file 'credentials.yaml'
+Read vars_file 'credentials.yaml'
+
+PLAY [ise_servers] *************************************************************
+Read vars_file 'credentials.yaml'
+META: ran handlers
+Read vars_file 'credentials.yaml'
+
+TASK [Get deployment info] *****************************************************
+task path: /home/karthik/playbooks/get_endpoints00.yaml:14
+ok: [10.150.1.14] => {
+    "changed": false,
+    "ise_response": [
+        {
+            "id": "0a450140-d8ec-11ee-9b63-42d857d3e796",
+            "link": {
+                "href": "https://10.150.1.14/ers/config/endpoint/0a450140-d8ec-11ee-9b63-42d857d3e796",
+                "rel": "self",
+                "type": "application/json"
+            },
+            "name": "50:00:00:17:00:08"
+        },
+        {
+            "id": "0ca9a230-cf49-11ee-8033-9a318f1907b9",
+            "link": {
+                "href": "https://10.150.1.14/ers/config/endpoint/0ca9a230-cf49-11ee-8033-9a318f1907b9",
+                "rel": "self",
+                "type": "application/json"
+            },
+            "name": "50:00:00:02:00:00"
+        },
+        {
+            "id": "1710e710-cf49-11ee-8033-9a318f1907b9",
+            "link": {
+                "href": "https://10.150.1.14/ers/config/endpoint/1710e710-cf49-11ee-8033-9a318f1907b9",
+                "rel": "self",
+                "type": "application/json"
+            },
+            "name": "50:00:00:03:00:00"
+        },
+        {
+            "id": "175e91e0-cf49-11ee-8033-9a318f1907b9",
+            "link": {
+                "href": "https://10.150.1.14/ers/config/endpoint/175e91e0-cf49-11ee-8033-9a318f1907b9",
+                "rel": "self",
+                "type": "application/json"
+            },
+            "name": "50:00:00:01:00:00"
+        },
+        {
+            "id": "1bbb8660-d8ec-11ee-9b63-42d857d3e796",
+            "link": {
+                "href": "https://10.150.1.14/ers/config/endpoint/1bbb8660-d8ec-11ee-9b63-42d857d3e796",
+                "rel": "self",
+                "type": "application/json"
+            },
+            "name": "50:00:00:16:00:07"
+        },
+        {
+            "id": "20a93ba0-d8eb-11ee-9b63-42d857d3e796",
+            "link": {
+                "href": "https://10.150.1.14/ers/config/endpoint/20a93ba0-d8eb-11ee-9b63-42d857d3e796",
+                "rel": "self",
+                "type": "application/json"
+            },
+            "name": "50:00:00:14:00:07"
+        },
+        {
+            "id": "20fed5b0-d8eb-11ee-9b63-42d857d3e796",
+            "link": {
+                "href": "https://10.150.1.14/ers/config/endpoint/20fed5b0-d8eb-11ee-9b63-42d857d3e796",
+                "rel": "self",
+                "type": "application/json"
+            },
+            "name": "50:00:00:15:00:08"
+        },
+        {
+            "id": "3a245d80-d8eb-11ee-9b63-42d857d3e796",
+            "link": {
+                "href": "https://10.150.1.14/ers/config/endpoint/3a245d80-d8eb-11ee-9b63-42d857d3e796",
+                "rel": "self",
+                "type": "application/json"
+            },
+            "name": "50:00:00:14:00:08"
+        },
+        {
+            "id": "40626b10-d8eb-11ee-9b63-42d857d3e796",
+            "link": {
+                "href": "https://10.150.1.14/ers/config/endpoint/40626b10-d8eb-11ee-9b63-42d857d3e796",
+                "rel": "self",
+                "type": "application/json"
+            },
+            "name": "50:00:00:16:00:08"
+        },
+        {
+            "id": "4341c7d0-d8ec-11ee-9b63-42d857d3e796",
+            "link": {
+                "href": "https://10.150.1.14/ers/config/endpoint/4341c7d0-d8ec-11ee-9b63-42d857d3e796",
+                "rel": "self",
+                "type": "application/json"
+            },
+            "name": "50:00:00:17:00:07"
+        },
+        {
+            "id": "49695ca0-d8eb-11ee-9b63-42d857d3e796",
+            "link": {
+                "href": "https://10.150.1.14/ers/config/endpoint/49695ca0-d8eb-11ee-9b63-42d857d3e796",
+                "rel": "self",
+                "type": "application/json"
+            },
+            "name": "50:00:00:15:00:07"
+        },
+        {
+            "id": "55bba5e0-d38b-11ee-a20f-f29ca897559c",
+            "link": {
+                "href": "https://10.150.1.14/ers/config/endpoint/55bba5e0-d38b-11ee-a20f-f29ca897559c",
+                "rel": "self",
+                "type": "application/json"
+            },
+            "name": "50:00:00:04:00:00"
+        },
+        {
+            "id": "5fb69770-d035-11ee-8033-9a318f1907b9",
+            "link": {
+                "href": "https://10.150.1.14/ers/config/endpoint/5fb69770-d035-11ee-8033-9a318f1907b9",
+                "rel": "self",
+                "type": "application/json"
+            },
+            "name": "50:00:00:13:00:00"
+        },
+        {
+            "id": "65e71e10-d915-11ee-9b63-42d857d3e796",
+            "link": {
+                "href": "https://10.150.1.14/ers/config/endpoint/65e71e10-d915-11ee-9b63-42d857d3e796",
+                "rel": "self",
+                "type": "application/json"
+            },
+            "name": "50:00:00:16:00:03"
+        },
+        {
+            "id": "6abb1450-d915-11ee-9b63-42d857d3e796",
+            "link": {
+                "href": "https://10.150.1.14/ers/config/endpoint/6abb1450-d915-11ee-9b63-42d857d3e796",
+                "rel": "self",
+                "type": "application/json"
+            },
+            "name": "50:00:00:16:00:04"
+        },
+        {
+            "id": "74f2bdb0-d915-11ee-9b63-42d857d3e796",
+            "link": {
+                "href": "https://10.150.1.14/ers/config/endpoint/74f2bdb0-d915-11ee-9b63-42d857d3e796",
+                "rel": "self",
+                "type": "application/json"
+            },
+            "name": "50:00:00:17:00:03"
+        },
+        {
+            "id": "79bca1d0-d915-11ee-9b63-42d857d3e796",
+            "link": {
+                "href": "https://10.150.1.14/ers/config/endpoint/79bca1d0-d915-11ee-9b63-42d857d3e796",
+                "rel": "self",
+                "type": "application/json"
+            },
+            "name": "50:00:00:17:00:04"
+        },
+        {
+            "id": "7b0e4010-d80d-11ee-9b63-42d857d3e796",
+            "link": {
+                "href": "https://10.150.1.14/ers/config/endpoint/7b0e4010-d80d-11ee-9b63-42d857d3e796",
+                "rel": "self",
+                "type": "application/json"
+            },
+            "name": "50:00:00:14:00:00"
+        },
+        {
+            "id": "7e1fc5d0-d80d-11ee-9b63-42d857d3e796",
+            "link": {
+                "href": "https://10.150.1.14/ers/config/endpoint/7e1fc5d0-d80d-11ee-9b63-42d857d3e796",
+                "rel": "self",
+                "type": "application/json"
+            },
+            "name": "50:00:00:15:00:00"
+        },
+        {
+            "id": "bdea1660-d8d6-11ee-9b63-42d857d3e796",
+            "link": {
+                "href": "https://10.150.1.14/ers/config/endpoint/bdea1660-d8d6-11ee-9b63-42d857d3e796",
+                "rel": "self",
+                "type": "application/json"
+            },
+            "name": "50:00:00:16:00:00"
+        },
+        {
+            "id": "be2dfd30-d8d6-11ee-9b63-42d857d3e796",
+            "link": {
+                "href": "https://10.150.1.14/ers/config/endpoint/be2dfd30-d8d6-11ee-9b63-42d857d3e796",
+                "rel": "self",
+                "type": "application/json"
+            },
+            "name": "50:00:00:17:00:00"
+        }
+    ],
+    "result": ""
+}
+Read vars_file 'credentials.yaml'
+
+TASK [Print deployment info] ***************************************************
+task path: /home/karthik/playbooks/get_endpoints00.yaml:22
+ok: [10.150.1.14] => {
+    "result": {
+        "changed": false,
+        "failed": false,
+        "ise_response": [
+            {
+                "id": "0a450140-d8ec-11ee-9b63-42d857d3e796",
+                "link": {
+                    "href": "https://10.150.1.14/ers/config/endpoint/0a450140-d8ec-11ee-9b63-42d857d3e796",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "name": "50:00:00:17:00:08"
+            },
+            {
+                "id": "0ca9a230-cf49-11ee-8033-9a318f1907b9",
+                "link": {
+                    "href": "https://10.150.1.14/ers/config/endpoint/0ca9a230-cf49-11ee-8033-9a318f1907b9",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "name": "50:00:00:02:00:00"
+            },
+            {
+                "id": "1710e710-cf49-11ee-8033-9a318f1907b9",
+                "link": {
+                    "href": "https://10.150.1.14/ers/config/endpoint/1710e710-cf49-11ee-8033-9a318f1907b9",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "name": "50:00:00:03:00:00"
+            },
+            {
+                "id": "175e91e0-cf49-11ee-8033-9a318f1907b9",
+                "link": {
+                    "href": "https://10.150.1.14/ers/config/endpoint/175e91e0-cf49-11ee-8033-9a318f1907b9",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "name": "50:00:00:01:00:00"
+            },
+            {
+                "id": "1bbb8660-d8ec-11ee-9b63-42d857d3e796",
+                "link": {
+                    "href": "https://10.150.1.14/ers/config/endpoint/1bbb8660-d8ec-11ee-9b63-42d857d3e796",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "name": "50:00:00:16:00:07"
+            },
+            {
+                "id": "20a93ba0-d8eb-11ee-9b63-42d857d3e796",
+                "link": {
+                    "href": "https://10.150.1.14/ers/config/endpoint/20a93ba0-d8eb-11ee-9b63-42d857d3e796",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "name": "50:00:00:14:00:07"
+            },
+            {
+                "id": "20fed5b0-d8eb-11ee-9b63-42d857d3e796",
+                "link": {
+                    "href": "https://10.150.1.14/ers/config/endpoint/20fed5b0-d8eb-11ee-9b63-42d857d3e796",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "name": "50:00:00:15:00:08"
+            },
+            {
+                "id": "3a245d80-d8eb-11ee-9b63-42d857d3e796",
+                "link": {
+                    "href": "https://10.150.1.14/ers/config/endpoint/3a245d80-d8eb-11ee-9b63-42d857d3e796",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "name": "50:00:00:14:00:08"
+            },
+            {
+                "id": "40626b10-d8eb-11ee-9b63-42d857d3e796",
+                "link": {
+                    "href": "https://10.150.1.14/ers/config/endpoint/40626b10-d8eb-11ee-9b63-42d857d3e796",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "name": "50:00:00:16:00:08"
+            },
+            {
+                "id": "4341c7d0-d8ec-11ee-9b63-42d857d3e796",
+                "link": {
+                    "href": "https://10.150.1.14/ers/config/endpoint/4341c7d0-d8ec-11ee-9b63-42d857d3e796",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "name": "50:00:00:17:00:07"
+            },
+            {
+                "id": "49695ca0-d8eb-11ee-9b63-42d857d3e796",
+                "link": {
+                    "href": "https://10.150.1.14/ers/config/endpoint/49695ca0-d8eb-11ee-9b63-42d857d3e796",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "name": "50:00:00:15:00:07"
+            },
+            {
+                "id": "55bba5e0-d38b-11ee-a20f-f29ca897559c",
+                "link": {
+                    "href": "https://10.150.1.14/ers/config/endpoint/55bba5e0-d38b-11ee-a20f-f29ca897559c",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "name": "50:00:00:04:00:00"
+            },
+            {
+                "id": "5fb69770-d035-11ee-8033-9a318f1907b9",
+                "link": {
+                    "href": "https://10.150.1.14/ers/config/endpoint/5fb69770-d035-11ee-8033-9a318f1907b9",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "name": "50:00:00:13:00:00"
+            },
+            {
+                "id": "65e71e10-d915-11ee-9b63-42d857d3e796",
+                "link": {
+                    "href": "https://10.150.1.14/ers/config/endpoint/65e71e10-d915-11ee-9b63-42d857d3e796",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "name": "50:00:00:16:00:03"
+            },
+            {
+                "id": "6abb1450-d915-11ee-9b63-42d857d3e796",
+                "link": {
+                    "href": "https://10.150.1.14/ers/config/endpoint/6abb1450-d915-11ee-9b63-42d857d3e796",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "name": "50:00:00:16:00:04"
+            },
+            {
+                "id": "74f2bdb0-d915-11ee-9b63-42d857d3e796",
+                "link": {
+                    "href": "https://10.150.1.14/ers/config/endpoint/74f2bdb0-d915-11ee-9b63-42d857d3e796",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "name": "50:00:00:17:00:03"
+            },
+            {
+                "id": "79bca1d0-d915-11ee-9b63-42d857d3e796",
+                "link": {
+                    "href": "https://10.150.1.14/ers/config/endpoint/79bca1d0-d915-11ee-9b63-42d857d3e796",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "name": "50:00:00:17:00:04"
+            },
+            {
+                "id": "7b0e4010-d80d-11ee-9b63-42d857d3e796",
+                "link": {
+                    "href": "https://10.150.1.14/ers/config/endpoint/7b0e4010-d80d-11ee-9b63-42d857d3e796",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "name": "50:00:00:14:00:00"
+            },
+            {
+                "id": "7e1fc5d0-d80d-11ee-9b63-42d857d3e796",
+                "link": {
+                    "href": "https://10.150.1.14/ers/config/endpoint/7e1fc5d0-d80d-11ee-9b63-42d857d3e796",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "name": "50:00:00:15:00:00"
+            },
+            {
+                "id": "bdea1660-d8d6-11ee-9b63-42d857d3e796",
+                "link": {
+                    "href": "https://10.150.1.14/ers/config/endpoint/bdea1660-d8d6-11ee-9b63-42d857d3e796",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "name": "50:00:00:16:00:00"
+            },
+            {
+                "id": "be2dfd30-d8d6-11ee-9b63-42d857d3e796",
+                "link": {
+                    "href": "https://10.150.1.14/ers/config/endpoint/be2dfd30-d8d6-11ee-9b63-42d857d3e796",
+                    "rel": "self",
+                    "type": "application/json"
+                },
+                "name": "50:00:00:17:00:00"
+            }
+        ],
+        "result": ""
+    }
+}
+Read vars_file 'credentials.yaml'
+META: ran handlers
+Read vars_file 'credentials.yaml'
+META: ran handlers
+
+PLAY RECAP *********************************************************************
+10.150.1.14                : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

@@ -1,0 +1,51 @@
+# 00_deployment_info.yaml
+#
+# This playbook will gather deployment info from your ISE instance. Some of this may be interesting to you,
+# but mostly it's just informational I may modify this playbook in the future to gather
+# some useful info that can be used by subsequent playbooks (policy and rule IDs),
+# or maybe gather all of the data that we configure for comparison
+
+- hosts: ise_servers
+# Read in some variables
+  vars_files:
+    - credentials.yaml  # read the ISE host and admin credentials
+  gather_facts: false
+  tasks:
+    - name: Get deployment info
+      cisco.ise.endpoint_info:
+        ise_hostname: "{{ ise_hostname }}"
+        ise_username: "{{ ise_username }}"
+        ise_password: "{{ ise_password }}"
+        ise_verify: "{{ ise_verify }}"
+#        id: string
+        name: "50:00:00:17:00:07"
+      register: result  # assign output to a variable
+    - name: Print deployment info
+      ansible.builtin.debug:
+        var: result  # print the output from the variable
+
+    - name: Get REJECTED info
+      cisco.ise.endpoint_get_rejected_endpoints_info:
+        ise_hostname: "{{ ise_hostname }}"
+        ise_username: "{{ ise_username }}"
+        ise_password: "{{ ise_password }}"
+        ise_verify: "{{ ise_verify }}"
+      register: result_rejected  # assign output to a variable
+    - name: Print REJECTED info
+      ansible.builtin.debug:
+        var: result_rejected  # print the output from the variable
+
+    - name: Get AN_ENDPOINT_BULK_MONITOR_STATUS_INFO info
+      cisco.ise.anc_endpoint_bulk_monitor_status_info:
+        ise_hostname: "{{ ise_hostname }}"
+        ise_username: "{{ ise_username }}"
+        ise_password: "{{ ise_password }}"
+        ise_verify: "{{ ise_verify }}"
+      register: result_bulk  # assign output to a variable
+    - name: Print AN_ENDPOINT_BULK_MONITOR_STATUS_INFO info
+      ansible.builtin.debug:
+        var: result_bulk  # print the output from the variable
+
+    - name: Print bulk response return
+      ansible.builtin.debug:
+        msg: "{{ ise_response }}"
